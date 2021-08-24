@@ -20,7 +20,7 @@ func main() {
 	cache.InitCache("cache")
 	initEnv()
 	setTodayNames()
-	absTime.InitTime("Europe/Moscow")
+	absTime.InitTime(time.Hour*3/time.Second)
 	Location = time.FixedZone("Current", int(time.Hour*3/time.Second))
 	bot, err := initBot()
 	if err != nil {
