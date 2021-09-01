@@ -32,6 +32,7 @@ var Peoples map[int64]struct {
 func main() {
 	cache.InitCache("cache")
 	initEnv()
+	absTime.InitTime(time.Hour*3/time.Second)
 	setVars()
 	getCacheStat()
 	absTime.InitTime("Europe/Moscow")
