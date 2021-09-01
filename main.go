@@ -32,10 +32,9 @@ var Peoples map[int64]struct {
 func main() {
 	cache.InitCache("cache")
 	initEnv()
-	absTime.InitTime(time.Hour*3/time.Second)
+	absTime.InitTime(time.Hour * 3 / time.Second)
 	setVars()
 	getCacheStat()
-	absTime.InitTime("Europe/Moscow")
 	Location = time.FixedZone("Current", int(time.Hour*3/time.Second))
 	Peoples = make(map[int64]struct {
 		Link  string
